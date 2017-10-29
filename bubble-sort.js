@@ -1,6 +1,6 @@
 const theArray = [72, 14, 34, 5, 24, 14, 53, 61, 38, 110, 39];
 
-const swap = (array, i, j) => {
+const checkIfSwap = (array, i, j) => {
   x = array[i];
   y = array[j];
 
@@ -13,14 +13,15 @@ const swap = (array, i, j) => {
   }
 }
 const bubbleSort = arrayToSort => {
+  const length = arrayToSort.length;
   let temp, x, y;
 
-  for (var i = 0; i < arrayToSort.length - 1; i++) {
+  for (var i = 0; i < length - 1; i++) {
     console.log(`previous order: ${arrayToSort}`);
 
-    for (var j = i + 1; j < arrayToSort.length; j++) {
+    for (var j = i + 1; j < length; j++) {
       console.log(`comparing ${arrayToSort[i]} against ${arrayToSort[j]} at position ${j}`);
-      swap(arrayToSort, i, j);
+      checkIfSwap(arrayToSort, i, j);
     }
 
     console.log(`new order: ${arrayToSort}`);
