@@ -23,7 +23,6 @@ const insertionSort = arrayToSort => {
   return arrayToSort;
 };
 
+console.log(`original array: ${theArray}`);
 const sortedArray = insertionSort(theArray);
-
-console.log(sortedArray);
-console.assert(sortedArray.length === initialLength);
+console.log(`sorted array: ${sortedArray}`);

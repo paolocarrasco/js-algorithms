@@ -30,6 +30,6 @@ const bubbleSort = arrayToSort => {
   return arrayToSort;
 };
 
+console.log(`original array: ${theArray}`);
 const sortedArray = bubbleSort(theArray);
-
-console.log(sortedArray);
+console.log(`sorted array: ${sortedArray}`);
