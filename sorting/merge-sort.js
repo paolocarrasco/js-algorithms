@@ -1,3 +1,18 @@
+const mergeSort = arrayToSort => {
+  const len = arrayToSort.length;
+
+  if (len === 1) {
+    return arrayToSort;
+  }
+
+  const splitPoint = Math.floor(len / 2);
+
+  const leftArray = mergeSort(arrayToSort.slice(0, splitPoint));
+  const rightArray = mergeSort(arrayToSort.slice(splitPoint));
+
+  return merge(leftArray, rightArray);
+};
+
 const merge = (leftArray, rightArray) => {
   const resultingArray = [];
   const totalLength = leftArray.length + rightArray.length;
@@ -21,7 +36,9 @@ const merge = (leftArray, rightArray) => {
   return resultingArray;
 };
 
-const a = [2, 4, 7, 9, 13, 16];
-const b = [3, 5, 6, 8, 10, 12, 18];
+const theArray = [72, 14, 34, 5, 24, 14, 53, 61, 38, 110, 39]
+const sortedArray = mergeSort(theArray);
 
-console.log(merge(a, b));
+console.log(`original array: ${theArray}`);
+console.log(`sorted array: ${sortedArray}`);
+
