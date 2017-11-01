@@ -1,3 +1,8 @@
+/**
+* Another simple sorting algorithm.
+* It has a running time of O(n²) in the worst case.
+* This algorithm does not produce a stable sort.
+*/
 const theArray = [72, 14, 34, 5, 24, 14, 53, 61, 38, 110, 39]
 
 const selectionSort = arrayToSort => {

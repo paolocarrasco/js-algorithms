@@ -1,3 +1,8 @@
+/**
+* Bubble sort is a basic algorithm for sorting items.
+* It has a running time of O(n²) in the worst case.
+* It is used mostly when learning algorithms.
+*/
 const theArray = [72, 14, 34, 5, 24, 14, 53, 61, 38, 110, 39];
 
 const checkIfSwap = (array, i, j) => {

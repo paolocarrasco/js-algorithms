@@ -1,3 +1,9 @@
+/**
+* Merge sort is the first useful algorithm learned for sorting items.
+* It has a running time of O(n log n) in the worst and average case.
+* It is not as fast as insertion sorting when array is small.
+* It produces a stable sort.
+*/
 const mergeSort = arrayToSort => {
   const len = arrayToSort.length;
 

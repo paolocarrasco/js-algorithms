@@ -1,3 +1,11 @@
+/**
+* Insertion sort is a basic algorithm for sorting items.
+* It has a running time of O(n²) in the worst case,
+* a running time of O(n) in the best case (when it is already sorted).
+* It is faster than other known algorithms when sorting small arrays.
+* This algorithm produces a stable sort.
+*/
+
 const theArray = [72, 14, 34, 5, 24, 14, 53, 61, 38, 110, 39]
 const initialLength = theArray.length;
 
