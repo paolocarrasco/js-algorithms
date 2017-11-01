@@ -5,12 +5,12 @@ Content
 -------
 
 1. Sorting
-  1. Bubble sort
-  1. Insertion sort
-  1. Selection sort
-  1. Merge sort
+    1. Bubble sort
+    1. Insertion sort
+    1. Selection sort
+    1. Merge sort
 1. Known algorithms
-  1. Hanoi towers
+    1. Hanoi towers
 
 Requirements
 ------------
