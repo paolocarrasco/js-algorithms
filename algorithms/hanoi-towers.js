@@ -1,6 +1,8 @@
 export default class Hanoi {
 
   constructor(discs) {
+    console.log('Running Hanoi Towers');
+
     this.towerA = discs;
     this.towerB = [];
     this.towerC = [];
