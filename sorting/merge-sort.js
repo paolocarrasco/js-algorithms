@@ -4,47 +4,49 @@
 * It is not as fast as insertion sorting when array is small.
 * It produces a stable sort.
 */
-const mergeSort = arrayToSort => {
-  const len = arrayToSort.length;
 
-  if (len === 1) {
-    return arrayToSort;
+export default class MergeSort {
+
+  constructor() {
+    console.log('Running the merge sort');
   }
 
-  const splitPoint = Math.floor(len / 2);
+  sort(theArray) {
+    const arrayToSort = Array.from(theArray);
+    const len = arrayToSort.length;
 
-  const leftArray = mergeSort(arrayToSort.slice(0, splitPoint));
-  const rightArray = mergeSort(arrayToSort.slice(splitPoint));
-
-  return merge(leftArray, rightArray);
-};
-
-const merge = (leftArray, rightArray) => {
-  const resultingArray = [];
-  const totalLength = leftArray.length + rightArray.length;
-
-  let i = 0, j = 0, k = 0, item;
-
-  while (k++ < totalLength) {
-    const itemOnLeftExists = leftArray[i] && !rightArray[j];
-    const isLeftLessThanRight = leftArray[i] < rightArray[j];
-
-    if (itemOnLeftExists || isLeftLessThanRight) {
-      item = leftArray[i++];
-    }
-    else {
-      item = rightArray[j++];
+    if (len === 1) {
+      return arrayToSort;
     }
 
-    resultingArray.push(item);
-  }
+    const splitPoint = Math.floor(len / 2);
 
-  return resultingArray;
-};
+    const leftArray = this.sort(arrayToSort.slice(0, splitPoint));
+    const rightArray = this.sort(arrayToSort.slice(splitPoint));
 
-const theArray = [72, 14, 34, 5, 24, 14, 53, 61, 38, 110, 39]
-const sortedArray = mergeSort(theArray);
+    return this.merge(leftArray, rightArray);
+  };
 
-console.log(`original array: ${theArray}`);
-console.log(`sorted array: ${sortedArray}`);
+  merge(leftArray, rightArray) {
+    const resultingArray = [];
+    const totalLength = leftArray.length + rightArray.length;
 
+    let i = 0, j = 0, k = 0, item;
+
+    while (k++ < totalLength) {
+      const itemOnLeftExists = leftArray[i] && !rightArray[j];
+      const isLeftLessThanRight = leftArray[i] < rightArray[j];
+
+      if (itemOnLeftExists || isLeftLessThanRight) {
+        item = leftArray[i++];
+      }
+      else {
+        item = rightArray[j++];
+      }
+
+      resultingArray.push(item);
+    }
+
+    return resultingArray;
+  };
+}

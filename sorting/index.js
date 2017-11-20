@@ -17,3 +17,7 @@ console.log(`sorted array: ${sortedArray}`);
 console.log(`original array: ${theArray}`);
 sortedArray = new SelectionSort().sort(theArray);
 console.log(`sorted array: ${sortedArray}`);
+
+console.log(`original array: ${theArray}`);
+sortedArray = new MergeSort().sort(theArray);
+console.log(`sorted array: ${sortedArray}`);
