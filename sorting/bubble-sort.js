@@ -4,6 +4,11 @@
 * It is used mostly when learning algorithms.
 */
 export default class BubbleSort {
+
+  constructor() {
+    console.log('Running bubble sort');
+  }
+
   checkIfSwap(array, i, j) {
     let x = array[i];
     let y = array[j];
