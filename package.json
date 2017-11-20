@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/paolocarrasco/js-algorithms/issues"
   },
-  "homepage": "https://github.com/paolocarrasco/js-algorithms#readme"
+  "homepage": "https://github.com/paolocarrasco/js-algorithms#readme",
+  "dependencies": {
+    "import-export": "^1.0.1"
+  }
 }
