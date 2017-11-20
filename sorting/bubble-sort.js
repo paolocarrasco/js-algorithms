@@ -3,6 +3,7 @@
 * It has a running time of O(n²) in the worst case.
 * It is used mostly when learning algorithms.
 */
+
 export default class BubbleSort {
 
   constructor() {
@@ -22,7 +23,8 @@ export default class BubbleSort {
     }
   }
 
-  sort(arrayToSort) {
+  sort(theArray) {
+    const arrayToSort = Array.from(theArray);
     const length = arrayToSort.length;
     let temp, x, y;
 

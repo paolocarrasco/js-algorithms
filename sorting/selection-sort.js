@@ -3,35 +3,38 @@
 * It has a running time of O(n²) in the worst case.
 * This algorithm does not produce a stable sort.
 */
-const theArray = [72, 14, 34, 5, 24, 14, 53, 61, 38, 110, 39]
 
-const selectionSort = arrayToSort => {
-  const length = arrayToSort.length;
+export default class SelectionSort {
 
-  for (let i = 0; i < length; i++) {
-    const current = arrayToSort[i];
-    let minPosition = i;
-    let minimum = current;
-
-    console.log(`current: ${current}`);
-
-    for (j = i; j < length; j++) {
-      if (arrayToSort[j] < minimum) {
-        minPosition = j;
-        minimum = arrayToSort[j];
-        console.log(`minimum: ${minimum}`);
-      }
-    }
-
-    arrayToSort[i] = minimum;
-    arrayToSort[minPosition] = current;
-    console.log(`Swapped ${minimum} <-> ${current}`);
-    console.log(`new array: ${arrayToSort}`);
+  constructor() {
+    console.log('Running selection sort');
   }
 
-  return arrayToSort;
-};
+  sort(theArray) {
+    const arrayToSort = Array.from(theArray);
+    const length = arrayToSort.length;
 
-console.log(`original array: ${theArray}`);
-const sortedArray = selectionSort(theArray);
-console.log(`sorted array: ${sortedArray}`);
+    for (let i = 0; i < length; i++) {
+      const current = arrayToSort[i];
+      let minPosition = i;
+      let minimum = current;
+
+      console.log(`current: ${current}`);
+
+      for (let j = i; j < length; j++) {
+        if (arrayToSort[j] < minimum) {
+          minPosition = j;
+          minimum = arrayToSort[j];
+          console.log(`minimum: ${minimum}`);
+        }
+      }
+
+      arrayToSort[i] = minimum;
+      arrayToSort[minPosition] = current;
+      console.log(`Swapped ${minimum} <-> ${current}`);
+      console.log(`new array: ${arrayToSort}`);
+    }
+
+    return arrayToSort;
+  }
+}
